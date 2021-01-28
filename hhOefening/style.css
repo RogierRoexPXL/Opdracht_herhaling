@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: #343740;
+    background-color: transparent;
+}
+
+body {
+    background-color: #ededed;
+}
+
+nav, header, section, #footer {
+    position: relative;
+    display: block;
+    margin: 10px 20px;
+    width: 1050px;
+    overflow: auto;
+}
+
+a {
+    text-underline: none;
+}
+
+/*--------------
+NAVIGATIE/MENUBALK
+--------------*/
+a:link{
+    text-decoration: none;
+}
+
+nav{
+    z-index: 9999;
+    position: fixed;
+    height: 55px;
+    top: 0;
+    overflow: visible;
+}
+
+nav div{
+    background-color: rgb(87, 222, 135);
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    opacity: 70%;
+}
+#nav_bar li {
+    list-style: none;
+    float: left;
+    display: inline-block;
+    margin-left: 10px;
+    color: #093156;
+}
+#nav_bar li:hover{
+    color: #ededed;
+}
+
+#logo{
+    height: calc(100%);
+    width: auto;
+    float: left;
+}
+
+/*--------------
+HEADER
+--------------*/
+header{
+    margin-top: 75px;
+}
+#banner{
+    width: 100%;
+    height: auto;
+}
+.foto_txt{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    font-size: 24px;
+    color: #ededed;
+}
+
+/*--------------
+SECTION
+--------------*/
+h1{
+    border-bottom: #343740 solid 2px;
+    display: block;
+}
+/*artikels*/
+article{
+    background-color: #ededed;
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 260px;
+    padding: 5px 10px;
+}
+article:first-of-type, article:nth-of-type(5) {
+    padding-left: 0;
+}
+article:nth-of-type(4), article:last-of-type {
+    padding-right: 0;
+}
+.art_datum, .art_auteur{
+    float: left;
+    font-size: small;
+    padding: 0;
+    margin: 0;
+}
+.art_auteur{
+    float: right;
+}
+
+.art_foto{
+    width: 100%;
+    height: 101px;
+    margin-top: 5px;
+}
+article h2{
+    margin: 10px 0 5px;
+    font-weight: 400;
+}
+.art_tekst{
+    margin: 0;
+    padding: 0;
+    font-size: smaller;
+    height: 100px;
+}
+article:hover .art_foto{
+    opacity: 70%;
+}
+
+/*footer*/
+#more{
+    float: left;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    top: -8px;
+    background-color: #ededed;
+}
+#more p{
+    width: 150px;
+    background-color: #343740;
+    color: #ededed;
+    position: absolute;
+    left: calc(50% - 75px);
+    padding: 10px;
+}
+
+/*-------------
+ACTIECENTRUM
+---------------*/
+.actie_btn{
+    padding: 5px;
+    width: 100%;
+    background-color: #093156;
+    color: #ededed;
+    margin: 0;
+}
+
+/*----------------
+FOOTER
+----------------*/
+#footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 75px;
+    background-color: black;
+}
+#footer p{
+    color: #ededed;
+    text-align: center;
+}
+
+/*-------------
+PRODUCTEN
+---------------*/
+table{
+    width: 1025px;
+    margin: 0 auto;
+}
+
+th, td {
+    color: #ededed;
+    padding: 3px;
+    text-align: center;
+}
+th {
+    background-color: #326544;
+}
+td {
+    background-color: #85d38e;
+}
+.najaar{
+    background-color: #368050;
+}
+td:nth-child(4), td:nth-child(5){
+    background-color: #b5d8b9;
+}
+
+/*-----------
+CONTACT
+-------------*/
+#logo_contact{
+    height: 18px;
+    width: auto;
+}
+#titel_contact{
+    float: left;
+}
+.eerste_rij, textarea{
+    float: left;
+    border-radius: 8px;
+    border: 0 transparent;
+    background-color: #85d38e;
+    color: #ededed;
+    font-weight: bold;
+    padding: 8px;
+    margin: 10px 0;
+}
+[type="text"], [type="email"]{
+    width: 31%;
+}
+.eerste_rij:nth-of-type(2){
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+textarea, #button{
+    width: 98%;
+}
+#button{
+    float: left;
+    color: #ededed;
+    border-radius: 8px;
+    margin: 0;
+    background-color: #326544;
+}
+.eerste_rij:focus, textarea:focus{
+    outline: none;
+}
+
+
+/*--------------
+RESPONSIVE DESIGN
+----------------*/
+
+@media screen and (max-width: 1000px){
+    nav, header, section, #footer {
+        width: 700px;
+    }
+    article{
+        width: 50%;
+    }
+    .actie{
+        width: 25%;
+    }
+    article:nth-child(even){
+        padding-left: 0;
+        padding-right: 20px;
+    }
+    article:nth-child(odd){
+        padding-left: 20px;
+        padding-right: 0;
+    }
+    .art_foto{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 700px){
+    nav, body, #footer{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #footer{
+        left: 0;
+        bottom: 0;
+    }
+    header, section {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+    article:nth-child(odd), article:nth-child(even){
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 400px;
+    }
+    article:hover .art_foto{
+        opacity: 100%;
+    }
+    .eerste_rij {
+        width: 98%;
+    }
+    .eerste_rij:nth-of-type(2){
+         margin-left: 0;
+         margin-right: 0;
+     }
+}

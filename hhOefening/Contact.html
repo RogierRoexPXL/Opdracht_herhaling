@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!--NAV-->
+    <nav>
+        <div>
+            <img id="logo" src="assets/logo.png" alt="Logo Tuin van Sam">
+            <ul id="nav_bar">
+                <li><a href="tuinVanSam.html">NIEUWS</a></li>
+                <li><a href="Producten.html">PRODUCTEN</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+<!--HEADER-->
+    <header>
+        <img id="banner" src="assets/banner.jpg" alt="Tuin van Sam - Banner">
+        <p class="foto_txt">DE TUIN VAN SAM</p>
+    </header>
+<!--CONTACTFORMULIER-->
+    <section>
+        <h1> <img id="logo_contact" src="assets/contact.png" alt="contact"> Contact</h1>
+        <p>Wij horen graag van onze fans. Laat van je horen:</p>
+
+        <form action="mailto:rogier.roex@student.pxl.be?subject=ow" method="post" enctype="text/plain">
+            <input name="naam" class="eerste_rij" type="text" value="Naam" required onclick="this.value=''"/>
+            <input name="mail" class="eerste_rij" type="email" value="E-mail" required onclick="this.value=''"/>
+            <input  name="ow" class="eerste_rij" type="text" value="Onderwerp" required onclick="this.value=''"/>
+            <textarea name="box" cols="32" rows="10" required onclick="this.value=''">Boodschap</textarea>
+            <input id="button" type="submit" value="Stuur boodschap"/>
+        </form>
+
+    </section>
+
+
+<!--FOOTER-->
+    <footer id="footer">
+        <div></div>
+        <p>Copyright PXL 2021</p>
+    </footer>
+
+</body>
+</html>
